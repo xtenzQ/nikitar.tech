@@ -68,9 +68,9 @@ Before we talk about agents, it helps to understand what an LLM actually is.
 
 An LLM is a function. You give it text, it gives you text back. That's it.
 
-```
-f(input_text) → output_text
-```
+$$
+f(\text{input\_text}) \rightarrow \text{output\_text}
+$$
 
 There's no memory between calls. There's no hidden state. Every time you send a message, the model sees the entire conversation from scratch. What feels like a "conversation" is actually your client re-sending the full history every single time.
 
