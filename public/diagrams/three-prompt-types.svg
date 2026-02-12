@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" fill="none">
+  <style>
+    text { font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif; }
+    .type-title { font-size: 13px; font-weight: 700; }
+    .type-file { font-size: 10.5px; font-weight: 600; font-family: 'SF Mono', 'Fira Code', monospace; }
+    .step { font-size: 11px; }
+    .human { font-size: 10.5px; font-weight: 600; }
+    .desc { font-size: 11px; font-weight: 600; }
+  </style>
+
+  <!-- Simple Prompt -->
+  <rect x="16" y="16" width="260" height="368" rx="12" fill="rgba(40,200,64,0.06)" stroke="rgba(40,200,64,0.3)" stroke-width="1.5"/>
+  <text x="146" y="42" text-anchor="middle" class="type-title" fill="var(--heading)">Simple Prompt</text>
+  <text x="146" y="60" text-anchor="middle" class="type-file" fill="var(--accent)">commit.md</text>
+
+  <!-- Flow -->
+  <rect x="56" y="76" width="180" height="30" rx="6" fill="rgba(0,112,203,0.08)" stroke="rgba(0,112,203,0.2)" stroke-width="1"/>
+  <text x="146" y="96" text-anchor="middle" class="step" fill="var(--text)">User: /commit</text>
+
+  <line x1="146" y1="106" x2="146" y2="120" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="140,120 146,128 152,120" fill="var(--border)"/>
+
+  <rect x="56" y="130" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="146" y="150" text-anchor="middle" class="step" fill="var(--text)">git status + diff</text>
+
+  <line x1="146" y1="160" x2="146" y2="170" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="56" y="172" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="146" y="192" text-anchor="middle" class="step" fill="var(--text)">analyze changes</text>
+
+  <line x1="146" y1="202" x2="146" y2="212" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="56" y="214" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="146" y="234" text-anchor="middle" class="step" fill="var(--text)">present plan</text>
+
+  <line x1="146" y1="244" x2="146" y2="254" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="46" y="256" width="200" height="30" rx="6" fill="rgba(239,156,3,0.1)" stroke="rgba(239,156,3,0.3)" stroke-width="1"/>
+  <text x="146" y="276" text-anchor="middle" class="human" fill="#ef9c03">Human: "looks good"</text>
+
+  <line x1="146" y1="286" x2="146" y2="296" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="56" y="298" width="180" height="30" rx="6" fill="rgba(40,200,64,0.1)" stroke="rgba(40,200,64,0.3)" stroke-width="1"/>
+  <text x="146" y="318" text-anchor="middle" class="step" fill="var(--text)">execute commits</text>
+
+  <text x="146" y="360" text-anchor="middle" class="desc" fill="var(--text-muted)">One task. Linear.</text>
+  <text x="146" y="376" text-anchor="middle" class="desc" fill="var(--text-muted)">One human checkpoint.</text>
+
+  <!-- Workflow Prompt -->
+  <rect x="310" y="16" width="260" height="368" rx="12" fill="rgba(239,156,3,0.06)" stroke="rgba(239,156,3,0.3)" stroke-width="1.5"/>
+  <text x="440" y="42" text-anchor="middle" class="type-title" fill="var(--heading)">Workflow Prompt</text>
+  <text x="440" y="60" text-anchor="middle" class="type-file" fill="var(--accent)">implement_plan.md</text>
+
+  <rect x="350" y="76" width="180" height="30" rx="6" fill="rgba(0,112,203,0.08)" stroke="rgba(0,112,203,0.2)" stroke-width="1"/>
+  <text x="440" y="96" text-anchor="middle" class="step" fill="var(--text)">User: /implement plan.md</text>
+
+  <line x1="440" y1="106" x2="440" y2="120" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="434,120 440,128 446,120" fill="var(--border)"/>
+
+  <rect x="350" y="130" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="440" y="150" text-anchor="middle" class="step" fill="var(--text)">read plan</text>
+
+  <line x1="440" y1="160" x2="440" y2="170" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="350" y="172" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="440" y="192" text-anchor="middle" class="step" fill="var(--text)">execute Phase 1</text>
+
+  <line x1="440" y1="202" x2="440" y2="212" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="340" y="214" width="200" height="30" rx="6" fill="rgba(239,156,3,0.1)" stroke="rgba(239,156,3,0.3)" stroke-width="1"/>
+  <text x="440" y="234" text-anchor="middle" class="human" fill="#ef9c03">Human verifies Phase 1</text>
+
+  <line x1="440" y1="244" x2="440" y2="254" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="350" y="256" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="440" y="276" text-anchor="middle" class="step" fill="var(--text)">execute Phase 2</text>
+
+  <line x1="440" y1="286" x2="440" y2="296" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="340" y="298" width="200" height="30" rx="6" fill="rgba(239,156,3,0.1)" stroke="rgba(239,156,3,0.3)" stroke-width="1"/>
+  <text x="440" y="318" text-anchor="middle" class="human" fill="#ef9c03">Human verifies Phase 2</text>
+
+  <text x="440" y="356" text-anchor="middle" class="desc" fill="var(--text-muted)">Sequential. Multiple gates.</text>
+  <text x="440" y="372" text-anchor="middle" class="desc" fill="var(--text-muted)">Persistent state (plan file).</text>
+
+  <!-- Orchestrator Prompt -->
+  <rect x="604" y="16" width="260" height="368" rx="12" fill="rgba(0,112,203,0.06)" stroke="rgba(0,112,203,0.3)" stroke-width="1.5"/>
+  <text x="734" y="42" text-anchor="middle" class="type-title" fill="var(--heading)">Orchestrator Prompt</text>
+  <text x="734" y="60" text-anchor="middle" class="type-file" fill="var(--accent)">research_codebase.md</text>
+
+  <rect x="644" y="76" width="180" height="30" rx="6" fill="rgba(0,112,203,0.08)" stroke="rgba(0,112,203,0.2)" stroke-width="1"/>
+  <text x="734" y="96" text-anchor="middle" class="step" fill="var(--text)">User: /research "auth?"</text>
+
+  <line x1="734" y1="106" x2="734" y2="120" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="728,120 734,128 740,120" fill="var(--border)"/>
+
+  <rect x="644" y="130" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="734" y="150" text-anchor="middle" class="step" fill="var(--text)">READ mentioned files</text>
+
+  <line x1="734" y1="160" x2="734" y2="170" stroke="var(--border)" stroke-width="1.5"/>
+
+  <!-- Parallel spawn -->
+  <rect x="624" y="172" width="220" height="100" rx="8" fill="rgba(0,112,203,0.05)" stroke="rgba(0,112,203,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="734" y="192" text-anchor="middle" class="human" fill="var(--accent)">Spawn in parallel:</text>
+  <text x="644" y="212" class="step" fill="var(--text)">locator   - finds files</text>
+  <text x="644" y="230" class="step" fill="var(--text)">analyzer  - explains code</text>
+  <text x="644" y="248" class="step" fill="var(--text)">researcher - finds docs</text>
+
+  <line x1="734" y1="272" x2="734" y2="282" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="644" y="284" width="180" height="30" rx="6" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="734" y="304" text-anchor="middle" class="step" fill="var(--text)">WAIT for all agents</text>
+
+  <line x1="734" y1="314" x2="734" y2="324" stroke="var(--border)" stroke-width="1.5"/>
+
+  <rect x="644" y="326" width="180" height="30" rx="6" fill="rgba(40,200,64,0.1)" stroke="rgba(40,200,64,0.3)" stroke-width="1"/>
+  <text x="734" y="346" text-anchor="middle" class="step" fill="var(--text)">Synthesize results</text>
+
+  <text x="734" y="376" text-anchor="middle" class="desc" fill="var(--text-muted)">Delegates. Parallel. Synthesis.</text>
+</svg>

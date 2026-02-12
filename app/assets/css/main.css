@@ -245,6 +245,12 @@ a:hover {
   background: transparent !important;
 }
 
+/* Plain text code blocks — Shiki skips highlighting so text inherits
+   the muted prose color.  Force it to be readable in both themes. */
+.prose pre.language-text > code {
+  color: var(--heading);
+}
+
 /* ── Callout / Prompt Boxes ────────────────────────────────── */
 .callout {
   padding: 1rem 1rem 1rem 3rem;
@@ -313,6 +319,33 @@ pre.shiki {
 
 .dark ::selection {
   background-color: rgba(138, 180, 248, 0.2);
+}
+
+/* ── Diagram Component ────────────────────────────────────── */
+.prose .diagram-wrapper {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: none;
+}
+
+.prose .diagram-wrapper > div {
+  width: 100%;
+}
+
+.prose .diagram-wrapper svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
 }
 
 /* ── Scrollbar (subtle) ────────────────────────────────────── */

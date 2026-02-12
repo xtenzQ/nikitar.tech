@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" fill="none">
+  <style>
+    text { font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif; }
+    .title { font-size: 13px; font-weight: 700; }
+    .subtitle { font-size: 11px; font-weight: 600; }
+    .item { font-size: 11px; }
+    .bar-label { font-size: 10px; font-weight: 600; }
+    .result { font-size: 11px; font-weight: 600; }
+    .footer { font-size: 12px; }
+  </style>
+
+  <!-- Main agent -->
+  <rect x="16" y="16" width="748" height="80" rx="12" fill="rgba(0,112,203,0.07)" stroke="rgba(0,112,203,0.35)" stroke-width="1.5"/>
+  <text x="390" y="40" text-anchor="middle" class="title" fill="var(--heading)">Main Agent (orchestrator)</text>
+  <text x="390" y="58" text-anchor="middle" class="subtitle" fill="var(--text-muted)">Context: 35% used</text>
+  <!-- Context bar -->
+  <rect x="260" y="66" width="260" height="10" rx="4" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="260" y="66" width="91" height="10" rx="4" fill="rgba(40,200,64,0.35)"/>
+  <text x="390" y="88" text-anchor="middle" class="item" fill="var(--text-muted)">system prompt + user question + compact summaries</text>
+
+  <!-- Connection lines -->
+  <line x1="150" y1="96" x2="150" y2="140" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="390" y1="96" x2="390" y2="140" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="630" y1="96" x2="630" y2="140" stroke="var(--border)" stroke-width="1.5"/>
+
+  <!-- Sub-agent 1: Locator -->
+  <rect x="24" y="140" width="252" height="120" rx="10" fill="rgba(239,156,3,0.07)" stroke="rgba(239,156,3,0.3)" stroke-width="1.5"/>
+  <text x="150" y="164" text-anchor="middle" class="title" fill="var(--heading)">Sub-agent 1 (locator)</text>
+  <text x="44" y="184" class="item" fill="var(--text-muted)">15 grep calls, 10 glob calls</text>
+  <!-- Bar: 80% -->
+  <rect x="44" y="196" width="212" height="10" rx="4" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="44" y="196" width="170" height="10" rx="4" fill="rgba(223,60,48,0.3)"/>
+  <text x="150" y="220" text-anchor="middle" class="bar-label" fill="var(--text-muted)">80% used</text>
+  <text x="150" y="250" text-anchor="middle" class="result" fill="var(--accent)">Returns: 15 lines (file locations)</text>
+
+  <!-- Sub-agent 2: Analyzer -->
+  <rect x="294" y="140" width="252" height="120" rx="10" fill="rgba(40,200,64,0.07)" stroke="rgba(40,200,64,0.3)" stroke-width="1.5"/>
+  <text x="420" y="164" text-anchor="middle" class="title" fill="var(--heading)">Sub-agent 2 (analyzer)</text>
+  <text x="314" y="184" class="item" fill="var(--text-muted)">reads 8 files, traces 3 flows</text>
+  <!-- Bar: 70% -->
+  <rect x="314" y="196" width="212" height="10" rx="4" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="314" y="196" width="148" height="10" rx="4" fill="rgba(239,156,3,0.3)"/>
+  <text x="420" y="220" text-anchor="middle" class="bar-label" fill="var(--text-muted)">70% used</text>
+  <text x="420" y="250" text-anchor="middle" class="result" fill="var(--accent)">Returns: 40 lines (code analysis)</text>
+
+  <!-- Sub-agent 3: Researcher -->
+  <rect x="564" y="140" width="252" height="120" rx="10" fill="rgba(0,112,203,0.07)" stroke="rgba(0,112,203,0.3)" stroke-width="1.5"/>
+  <text x="690" y="164" text-anchor="middle" class="title" fill="var(--heading)">Sub-agent 3 (researcher)</text>
+  <text x="584" y="184" class="item" fill="var(--text-muted)">5 web searches, 3 page fetches</text>
+  <!-- Bar: 60% -->
+  <rect x="584" y="196" width="212" height="10" rx="4" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="584" y="196" width="127" height="10" rx="4" fill="rgba(239,156,3,0.25)"/>
+  <text x="690" y="220" text-anchor="middle" class="bar-label" fill="var(--text-muted)">60% used</text>
+  <text x="690" y="250" text-anchor="middle" class="result" fill="var(--accent)">Returns: 20 lines (documentation)</text>
+
+  <!-- Footer -->
+  <text x="390" y="300" text-anchor="middle" class="footer" fill="var(--text)">All that noise stays in sub-agent context.</text>
+  <text x="390" y="318" text-anchor="middle" class="footer" fill="var(--text)">Main agent only sees the compact summaries.</text>
+</svg>

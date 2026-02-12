@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" fill="none">
+  <style>
+    text { font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif; }
+    .title { font-size: 14px; font-weight: 700; }
+    .label { font-size: 12px; font-weight: 600; }
+    .pct { font-size: 12px; font-weight: 700; }
+    .status { font-size: 12px; font-weight: 600; }
+    .note { font-size: 12px; }
+  </style>
+
+  <!-- Title -->
+  <text x="320" y="30" text-anchor="middle" class="title" fill="var(--heading)">Context window (200k tokens)</text>
+
+  <!-- Legend -->
+  <rect x="100" y="44" width="440" height="24" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <text x="320" y="61" text-anchor="middle" class="label" fill="var(--text-muted)">[system prompt] [documents] [conversation] [tools]</text>
+
+  <!-- 40% bar -->
+  <text x="44" y="106" text-anchor="end" class="pct" fill="var(--text)">40%</text>
+  <rect x="56" y="90" width="400" height="24" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="56" y="90" width="160" height="24" rx="6" fill="rgba(40,200,64,0.25)"/>
+  <text x="476" y="107" class="status" fill="#28c840">Good</text>
+
+  <!-- 60% bar -->
+  <text x="44" y="146" text-anchor="end" class="pct" fill="var(--text)">60%</text>
+  <rect x="56" y="130" width="400" height="24" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="56" y="130" width="240" height="24" rx="6" fill="rgba(239,156,3,0.3)"/>
+  <text x="476" y="147" class="status" fill="#ef9c03">OK</text>
+
+  <!-- 80% bar -->
+  <text x="44" y="186" text-anchor="end" class="pct" fill="var(--text)">80%</text>
+  <rect x="56" y="170" width="400" height="24" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="56" y="170" width="320" height="24" rx="6" fill="rgba(223,60,48,0.25)"/>
+  <text x="476" y="187" class="status" fill="#df3c30">Danger</text>
+
+  <!-- 95% bar -->
+  <text x="44" y="226" text-anchor="end" class="pct" fill="var(--text)">95%</text>
+  <rect x="56" y="210" width="400" height="24" rx="6" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="56" y="210" width="380" height="24" rx="6" fill="rgba(223,60,48,0.4)"/>
+  <text x="476" y="227" class="status" fill="#df3c30">Lost</text>
+
+  <!-- Footer -->
+  <text x="320" y="256" text-anchor="middle" class="note" fill="var(--text-muted)">More noise = worse output. Focused context = better output.</text>
+</svg>

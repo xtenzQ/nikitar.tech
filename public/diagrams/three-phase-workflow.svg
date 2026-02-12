@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" fill="none">
+  <style>
+    text { font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif; }
+    .phase-title { font-size: 13px; font-weight: 700; }
+    .phase-sub { font-size: 10px; font-weight: 600; opacity: 0.6; }
+    .item { font-size: 11px; }
+    .review-title { font-size: 11px; font-weight: 700; }
+    .review-item { font-size: 10.5px; }
+    .leverage { font-size: 11px; font-weight: 600; }
+  </style>
+
+  <!-- Phase 1: Research -->
+  <rect x="16" y="16" width="260" height="200" rx="12" fill="rgba(0,112,203,0.07)" stroke="rgba(0,112,203,0.35)" stroke-width="1.5"/>
+  <text x="146" y="42" text-anchor="middle" class="phase-title" fill="var(--heading)">Phase 1: Research</text>
+  <text x="146" y="58" text-anchor="middle" class="phase-sub" fill="var(--text-muted)">(fresh context)</text>
+
+  <text x="36" y="82" class="item" fill="var(--text)">Input:</text>
+  <text x="46" y="98" class="item" fill="var(--text-muted)">- ticket / issue</text>
+  <text x="46" y="114" class="item" fill="var(--text-muted)">- codebase</text>
+  <text x="36" y="138" class="item" fill="var(--text)">Agent searches, reads,</text>
+  <text x="36" y="154" class="item" fill="var(--text)">maps the codebase</text>
+  <text x="36" y="178" class="item" fill="var(--text)">Output:</text>
+  <text x="46" y="194" class="item" fill="var(--accent)">research.md</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="276" y1="116" x2="302" y2="116" stroke="var(--accent)" stroke-width="2"/>
+  <polygon points="302,110 314,116 302,122" fill="var(--accent)"/>
+
+  <!-- Phase 2: Plan -->
+  <rect x="314" y="16" width="260" height="200" rx="12" fill="rgba(239,156,3,0.07)" stroke="rgba(239,156,3,0.35)" stroke-width="1.5"/>
+  <text x="444" y="42" text-anchor="middle" class="phase-title" fill="var(--heading)">Phase 2: Plan</text>
+  <text x="444" y="58" text-anchor="middle" class="phase-sub" fill="var(--text-muted)">(fresh context)</text>
+
+  <text x="334" y="82" class="item" fill="var(--text)">Input:</text>
+  <text x="344" y="98" class="item" fill="var(--text-muted)">- research.md</text>
+  <text x="344" y="114" class="item" fill="var(--text-muted)">- ticket / issue</text>
+  <text x="334" y="138" class="item" fill="var(--text)">Agent creates step-by-step</text>
+  <text x="334" y="154" class="item" fill="var(--text)">implementation plan</text>
+  <text x="334" y="178" class="item" fill="var(--text)">Output:</text>
+  <text x="344" y="194" class="item" fill="var(--accent)">plan.md</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="574" y1="116" x2="600" y2="116" stroke="var(--accent)" stroke-width="2"/>
+  <polygon points="600,110 612,116 600,122" fill="var(--accent)"/>
+
+  <!-- Phase 3: Implement -->
+  <rect x="612" y="16" width="252" height="200" rx="12" fill="rgba(40,200,64,0.07)" stroke="rgba(40,200,64,0.35)" stroke-width="1.5"/>
+  <text x="738" y="42" text-anchor="middle" class="phase-title" fill="var(--heading)">Phase 3: Implement</text>
+  <text x="738" y="58" text-anchor="middle" class="phase-sub" fill="var(--text-muted)">(fresh context)</text>
+
+  <text x="632" y="82" class="item" fill="var(--text)">Input:</text>
+  <text x="642" y="98" class="item" fill="var(--text-muted)">- plan.md</text>
+  <text x="642" y="114" class="item" fill="var(--text-muted)">- codebase</text>
+  <text x="632" y="138" class="item" fill="var(--text)">Agent follows plan</text>
+  <text x="632" y="154" class="item" fill="var(--text)">phase by phase</text>
+  <text x="632" y="178" class="item" fill="var(--text)">Output:</text>
+  <text x="642" y="194" class="item" fill="var(--accent)">working code</text>
+
+  <!-- Human Review boxes -->
+  <!-- Review 1 -->
+  <rect x="56" y="240" width="180" height="68" rx="8" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="146" y="262" text-anchor="middle" class="review-title" fill="var(--heading)">Human Review</text>
+  <text x="146" y="280" text-anchor="middle" class="review-item" fill="var(--text-muted)">Is the research correct?</text>
+  <text x="146" y="298" text-anchor="middle" class="leverage" fill="#df3c30">Highest leverage!</text>
+
+  <!-- Arrow phase 1 → review 1 -->
+  <line x1="146" y1="216" x2="146" y2="240" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="140,240 146,250 152,240" fill="var(--border)"/>
+
+  <!-- Review 2 -->
+  <rect x="354" y="240" width="180" height="68" rx="8" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="444" y="262" text-anchor="middle" class="review-title" fill="var(--heading)">Human Review</text>
+  <text x="444" y="280" text-anchor="middle" class="review-item" fill="var(--text-muted)">Is the plan sound?</text>
+  <text x="444" y="298" text-anchor="middle" class="leverage" fill="#ef9c03">High leverage!</text>
+
+  <!-- Arrow phase 2 → review 2 -->
+  <line x1="444" y1="216" x2="444" y2="240" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="438,240 444,250 450,240" fill="var(--border)"/>
+
+  <!-- Review 3 -->
+  <rect x="648" y="240" width="180" height="68" rx="8" fill="var(--card-bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="738" y="262" text-anchor="middle" class="review-title" fill="var(--heading)">Human Review</text>
+  <text x="738" y="280" text-anchor="middle" class="review-item" fill="var(--text-muted)">Does the code work?</text>
+  <text x="738" y="298" text-anchor="middle" class="leverage" fill="#28c840">Standard review</text>
+
+  <!-- Arrow phase 3 → review 3 -->
+  <line x1="738" y1="216" x2="738" y2="240" stroke="var(--border)" stroke-width="1.5"/>
+  <polygon points="732,240 738,250 744,240" fill="var(--border)"/>
+
+  <!-- Bottom note -->
+  <text x="440" y="368" text-anchor="middle" class="item" fill="var(--text-muted)">Each phase starts with a fresh context window. Output of one phase becomes compact input for the next.</text>
+</svg>
