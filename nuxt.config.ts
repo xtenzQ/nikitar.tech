@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://nikitar.tech',
+    url: 'https://nikitar.dev',
     name: 'Nikita Rusetskii',
     description: 'Software & AI Engineer — blog and portfolio',
     defaultLocale: 'en',
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: '/nikitar.tech/',
+    baseURL: '/',
     head: {
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
