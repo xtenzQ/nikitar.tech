@@ -49,6 +49,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: '/nikitar.tech/',
     head: {
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
