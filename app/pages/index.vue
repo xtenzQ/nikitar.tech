@@ -6,6 +6,17 @@ const { data: posts } = await useAsyncData('recent-posts', () =>
     .limit(3)
     .all()
 )
+
+useSeoMeta({
+  title: 'Nikita Rusetskii',
+  description: 'Software & AI Engineer — blog and portfolio. I build things with Java, Kotlin, and Python.',
+})
+
+defineOgImage({
+  component: 'NuxtSeo',
+  title: 'Nikita Rusetskii',
+  description: 'Software & AI Engineer — blog and portfolio',
+})
 </script>
 
 <template>

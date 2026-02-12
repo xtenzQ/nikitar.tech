@@ -5,6 +5,17 @@ const { data: posts } = await useAsyncData('all-posts', () =>
     .order('date', 'DESC')
     .all()
 )
+
+useSeoMeta({
+  title: 'Blog',
+  description: 'Articles on software engineering, AI, and technology by Nikita Rusetskii.',
+})
+
+defineOgImage({
+  component: 'NuxtSeo',
+  title: 'Blog',
+  description: 'Articles on software engineering, AI, and technology.',
+})
 </script>
 
 <template>

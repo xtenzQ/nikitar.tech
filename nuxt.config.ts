@@ -58,13 +58,11 @@ export default defineNuxtConfig({
     },
   },
 
-  ogImage: { enabled: false },
-
-  robots: {
-    robotsTxt: false,
-  },
-
   nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
     watchOptions: {
       usePolling: true,
       interval: 1000,

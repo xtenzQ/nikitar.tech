@@ -18,7 +18,29 @@ const readingTime = computed(() => {
 useSeoMeta({
   title: post.value.title,
   description: post.value.description,
+  ogType: 'article',
+  articlePublishedTime: post.value.date,
+  articleTag: post.value.tags,
 })
+
+defineOgImage({
+  component: 'NuxtSeo',
+  title: post.value.title,
+  description: post.value.description,
+})
+
+useSchemaOrg([
+  defineArticle({
+    '@type': 'BlogPosting',
+    'headline': post.value.title,
+    'description': post.value.description,
+    'datePublished': post.value.date,
+    'author': {
+      name: 'Nikita Rusetskii',
+      url: 'https://nikitar.dev',
+    },
+  }),
+])
 </script>
 
 <template>

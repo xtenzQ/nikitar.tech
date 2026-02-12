@@ -1,3 +1,28 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About',
+  description: 'Software & AI Engineer with experience in backend development, distributed systems, and machine learning.',
+})
+
+defineOgImage({
+  component: 'NuxtSeo',
+  title: 'About — Nikita Rusetskii',
+  description: 'Software & AI Engineer with experience in backend development, distributed systems, and machine learning.',
+})
+
+useSchemaOrg([
+  definePerson({
+    name: 'Nikita Rusetskii',
+    url: 'https://nikitar.dev',
+    jobTitle: 'Software & AI Engineer',
+    sameAs: [
+      'https://github.com/xtenzq',
+      'https://www.linkedin.com/in/xtenzq/',
+    ],
+  }),
+])
+</script>
+
 <template>
   <div>
     <h1 class="text-3xl font-bold mb-8" style="color: var(--heading);">About</h1>
