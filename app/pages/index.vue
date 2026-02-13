@@ -7,16 +7,6 @@ const { data: posts } = await useAsyncData('recent-posts', () =>
     .all()
 )
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-function formatDate(dateStr: string): string {
-  const d = new Date(dateStr)
-  const day = d.getUTCDate()
-  const mon = months[d.getUTCMonth()]
-  const year = String(d.getUTCFullYear()).slice(2)
-  return `${day} ${mon} '${year}`
-}
-
 useSeoMeta({
   title: 'Nikita Rusetskii',
   description: 'Software & AI Engineer. I build things with Java, Kotlin, and Python. Into distributed systems and LLM-powered applications.',
@@ -56,6 +46,7 @@ defineOgImage({
         View all posts &rarr;
       </NuxtLink>
     </section>
+
   </div>
 </template>
 

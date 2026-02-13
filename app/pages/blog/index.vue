@@ -22,7 +22,7 @@ defineOgImage({
   <div>
     <h1 class="text-3xl font-bold mb-8" style="color: var(--heading);">Blog</h1>
 
-    <div v-if="posts?.length" class="space-y-6">
+    <div v-if="posts?.length" class="divide-y" style="border-color: var(--border);">
       <BlogPostCard
         v-for="post in posts"
         :key="post.path"

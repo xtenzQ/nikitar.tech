@@ -11,9 +11,9 @@ defineProps<{
 <template>
   <NuxtLink
     :to="path"
-    class="blog-post-card block px-5 py-4 rounded-lg transition-all"
+    class="blog-post-card block px-5 py-6 rounded-lg transition-all"
   >
-    <time class="text-xs font-medium" style="color: var(--text-muted);">{{ date }}</time>
+    <time class="text-xs font-medium" style="color: var(--text-muted);">{{ formatDate(date) }}</time>
     <h3 class="text-lg font-semibold mt-1" style="color: var(--heading);">{{ title }}</h3>
     <p class="text-sm font-light mt-1 line-clamp-2" style="color: var(--text);">{{ description }}</p>
     <div v-if="tags?.length" class="flex flex-wrap gap-2 mt-3">

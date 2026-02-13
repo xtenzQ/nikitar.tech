@@ -10,8 +10,6 @@ tags:
 draft: false
 ---
 
-Thoughts on incorporating AI coding agents into real engineering workflows and what I learned so far.
-
 I'm currently introducing AI-assisted development at the company I work at. This article is my attempt to organize what I know, what I'm still figuring out, and what resources helped me the most.
 
 ## Why Should You Care

@@ -44,7 +44,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <article v-if="post">
+  <article v-if="post" class="max-w-prose mx-auto">
     <NuxtLink to="/blog" class="inline-flex items-center gap-1 text-sm mb-6 transition-colors" style="color: var(--text-muted);">
       <Icon name="mdi:arrow-left" size="16" />
       Back to blog
@@ -54,7 +54,7 @@ useSchemaOrg([
       <h1 class="text-3xl font-bold" style="color: var(--heading);">{{ post.title }}</h1>
       <p class="mt-2 text-lg font-light" style="color: var(--text);">{{ post.description }}</p>
       <div class="flex items-center gap-3 text-sm mt-4" style="color: var(--text-muted);">
-        <time>{{ post.date }}</time>
+        <time>{{ formatDate(post.date) }}</time>
         <span>&middot;</span>
         <span>{{ readingTime }}</span>
       </div>

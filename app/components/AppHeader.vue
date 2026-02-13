@@ -1,8 +1,13 @@
 <script setup lang="ts">
+const route = useRoute()
 const colorMode = useColorMode()
 
 function toggleTheme() {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
+function navColor(path: string): string {
+  return route.path.startsWith(path) ? 'var(--heading)' : 'var(--text-muted)'
 }
 </script>
 
@@ -13,10 +18,10 @@ function toggleTheme() {
         nikitar.dev
       </NuxtLink>
       <div class="flex items-center gap-6">
-        <NuxtLink to="/blog" class="text-sm font-medium transition-colors" style="color: var(--text-muted);">
+        <NuxtLink to="/blog" class="text-sm font-medium transition-colors" :style="{ color: navColor('/blog') }">
           Blog
         </NuxtLink>
-        <NuxtLink to="/about" class="text-sm font-medium transition-colors" style="color: var(--text-muted);">
+        <NuxtLink to="/about" class="text-sm font-medium transition-colors" :style="{ color: navColor('/about') }">
           About
         </NuxtLink>
         <button
