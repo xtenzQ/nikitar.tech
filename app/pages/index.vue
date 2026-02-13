@@ -23,7 +23,7 @@ defineOgImage({
   <div>
     <section class="mb-12">
       <h1 class="text-3xl font-bold" style="color: var(--heading);">Hey, I'm Nikita</h1>
-      <p class="mt-3 text-lg max-w-2xl" style="color: var(--text);">
+      <p class="mt-3 text-lg font-light max-w-2xl" style="color: var(--text);">
         Software &amp; AI Engineer. I build things with Java, Kotlin, and Python.
         Into distributed systems and LLM-powered applications.
       </p>

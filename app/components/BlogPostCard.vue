@@ -15,7 +15,7 @@ defineProps<{
   >
     <time class="text-xs font-medium" style="color: var(--text-muted);">{{ date }}</time>
     <h3 class="text-lg font-semibold mt-1" style="color: var(--heading);">{{ title }}</h3>
-    <p class="text-sm mt-1 line-clamp-2" style="color: var(--text);">{{ description }}</p>
+    <p class="text-sm font-light mt-1 line-clamp-2" style="color: var(--text);">{{ description }}</p>
     <div v-if="tags?.length" class="flex flex-wrap gap-2 mt-3">
       <TagBadge v-for="tag in tags" :key="tag" :label="tag" />
     </div>

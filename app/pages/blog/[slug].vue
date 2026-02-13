@@ -52,7 +52,7 @@ useSchemaOrg([
 
     <header class="mb-10">
       <h1 class="text-3xl font-bold" style="color: var(--heading);">{{ post.title }}</h1>
-      <p class="mt-2 text-lg" style="color: var(--text);">{{ post.description }}</p>
+      <p class="mt-2 text-lg font-light" style="color: var(--text);">{{ post.description }}</p>
       <div class="flex items-center gap-3 text-sm mt-4" style="color: var(--text-muted);">
         <time>{{ post.date }}</time>
         <span>&middot;</span>

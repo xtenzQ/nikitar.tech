@@ -19,7 +19,7 @@ defineProps<{
     >
       {{ title }}
     </component>
-    <p class="text-sm mt-1" style="color: var(--text);">{{ description }}</p>
+    <p class="text-sm font-light mt-1" style="color: var(--text);">{{ description }}</p>
     <div v-if="tags?.length" class="flex flex-wrap gap-2 mt-2">
       <TagBadge v-for="tag in tags" :key="tag" :label="tag" />
     </div>
