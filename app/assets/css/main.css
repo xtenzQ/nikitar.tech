@@ -317,8 +317,24 @@ pre.shiki {
   color: var(--text-muted);
 }
 
+.theme-toggle .icon-light {
+  display: inline-block;
+}
+
+.theme-toggle .icon-dark {
+  display: none;
+}
+
 .dark .theme-toggle {
   color: var(--heading);
+}
+
+.dark .theme-toggle .icon-light {
+  display: none;
+}
+
+.dark .theme-toggle .icon-dark {
+  display: inline-block;
 }
 
 /* ── Selection ─────────────────────────────────────────────── */

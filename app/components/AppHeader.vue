@@ -24,8 +24,8 @@ function toggleTheme() {
           class="p-2 rounded-md transition-colors hover:opacity-80 theme-toggle"
           @click="toggleTheme"
         >
-          <Icon v-if="colorMode.value === 'dark'" name="mdi:weather-sunny" size="20" />
-          <Icon v-else name="mdi:weather-night" size="20" />
+          <Icon class="icon-light" name="mdi:weather-night" size="20" />
+          <Icon class="icon-dark" name="mdi:weather-sunny" size="20" />
         </button>
       </div>
     </nav>
