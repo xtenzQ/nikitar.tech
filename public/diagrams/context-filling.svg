@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 320" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 436" fill="none">
   <style>
     text { font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif; }
     .title { font-size: 14px; font-weight: 700; }
@@ -8,49 +8,48 @@
     .footer { font-size: 12px; font-weight: 600; }
   </style>
 
-  <text x="330" y="28" text-anchor="middle" class="title" fill="var(--heading)">Context window filling up</text>
+  <text x="330" y="48" text-anchor="middle" class="title" fill="var(--heading)">Context window filling up</text>
 
-  <!-- Stacked bars representing context usage -->
-  <rect x="40" y="48" width="580" height="230" rx="10" fill="var(--bg-secondary)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="48" y="80" width="564" height="332" rx="12" fill="var(--bg-secondary)"/>
 
   <!-- system prompt: ~5% of context -->
-  <rect x="52" y="58" width="28" height="24" rx="4" fill="rgba(0,112,203,0.25)"/>
-  <text x="92" y="75" class="bar-label" fill="var(--text)">system prompt</text>
-  <text x="218" y="75" class="pct" fill="var(--text-muted)">~5%</text>
+  <rect x="72" y="104" width="28" height="24" rx="4" fill="rgba(0,112,203,0.25)"/>
+  <text x="220" y="121" class="bar-label" fill="var(--text)">system prompt</text>
+  <text x="340" y="121" class="pct" fill="var(--text-muted)">~5%</text>
 
   <!-- user message: ~2% of context -->
-  <rect x="52" y="90" width="11" height="24" rx="4" fill="rgba(40,200,64,0.25)"/>
-  <text x="77" y="107" class="bar-label" fill="var(--text)">user msg</text>
-  <text x="218" y="107" class="pct" fill="var(--text-muted)">~2%</text>
+  <rect x="72" y="140" width="11" height="24" rx="4" fill="rgba(40,200,64,0.25)"/>
+  <text x="220" y="157" class="bar-label" fill="var(--text)">user msg</text>
+  <text x="340" y="157" class="pct" fill="var(--text-muted)">~2%</text>
 
   <!-- grep results: ~15% of context -->
-  <rect x="52" y="122" width="83" height="24" rx="4" fill="rgba(239,156,3,0.3)"/>
-  <text x="152" y="139" class="bar-label" fill="var(--text)">grep results</text>
-  <text x="218" y="139" class="pct" fill="var(--text-muted)">~15%</text>
-  <text x="256" y="139" class="label" fill="var(--text-muted)">searching for files</text>
+  <rect x="72" y="176" width="83" height="24" rx="4" fill="rgba(239,156,3,0.3)"/>
+  <text x="220" y="193" class="bar-label" fill="var(--text)">grep results</text>
+  <text x="340" y="193" class="pct" fill="var(--text-muted)">~15%</text>
+  <text x="384" y="193" class="label" fill="var(--text-muted)">searching for files</text>
 
   <!-- file contents: ~25% of context -->
-  <rect x="52" y="154" width="139" height="24" rx="4" fill="rgba(239,156,3,0.3)"/>
-  <text x="152" y="171" class="bar-label" fill="var(--text)">file contents</text>
-  <text x="218" y="171" class="pct" fill="var(--text-muted)">~25%</text>
-  <text x="256" y="171" class="label" fill="var(--text-muted)">reading code</text>
+  <rect x="72" y="212" width="139" height="24" rx="4" fill="rgba(239,156,3,0.3)"/>
+  <text x="220" y="229" class="bar-label" fill="var(--text)">file contents</text>
+  <text x="340" y="229" class="pct" fill="var(--text-muted)">~25%</text>
+  <text x="384" y="229" class="label" fill="var(--text-muted)">reading code</text>
 
   <!-- edit attempts: ~15% of context -->
-  <rect x="52" y="186" width="83" height="24" rx="4" fill="rgba(223,60,48,0.2)"/>
-  <text x="152" y="203" class="bar-label" fill="var(--text)">edit attempts</text>
-  <text x="218" y="203" class="pct" fill="var(--text-muted)">~15%</text>
-  <text x="256" y="203" class="label" fill="var(--text-muted)">trial and error</text>
+  <rect x="72" y="248" width="83" height="24" rx="4" fill="rgba(223,60,48,0.2)"/>
+  <text x="220" y="265" class="bar-label" fill="var(--text)">edit attempts</text>
+  <text x="340" y="265" class="pct" fill="var(--text-muted)">~15%</text>
+  <text x="384" y="265" class="label" fill="var(--text-muted)">trial and error</text>
 
   <!-- test output: ~25% of context -->
-  <rect x="52" y="218" width="139" height="24" rx="4" fill="rgba(223,60,48,0.25)"/>
-  <text x="152" y="235" class="bar-label" fill="var(--text)">test output + error logs</text>
-  <text x="318" y="235" class="pct" fill="var(--text-muted)">~25%</text>
-  <text x="356" y="235" class="label" fill="var(--text-muted)">debugging</text>
+  <rect x="72" y="284" width="139" height="24" rx="4" fill="rgba(223,60,48,0.25)"/>
+  <text x="220" y="301" class="bar-label" fill="var(--text)">test output + error logs</text>
+  <text x="340" y="301" class="pct" fill="var(--text-muted)">~25%</text>
+  <text x="384" y="301" class="label" fill="var(--text-muted)">debugging</text>
 
   <!-- Capacity indicator -->
-  <rect x="52" y="252" width="483" height="18" rx="4" fill="rgba(223,60,48,0.4)" stroke="rgba(223,60,48,0.6)" stroke-width="1"/>
-  <text x="293" y="265" text-anchor="middle" class="bar-label" fill="#df3c30">87% full</text>
+  <rect x="72" y="332" width="516" height="24" rx="4" fill="var(--border)" opacity="0.3"/>
+  <rect x="72" y="332" width="449" height="24" rx="4" fill="rgba(223,60,48,0.4)"/>
+  <text x="296" y="348" text-anchor="middle" class="bar-label" fill="#df3c30">87% full</text>
 
-  <!-- Footer -->
-  <text x="330" y="302" text-anchor="middle" class="footer" fill="#df3c30">Agent is lost. It forgot the original goal 40 messages ago.</text>
+  <text x="330" y="388" text-anchor="middle" class="footer" fill="#df3c30">Agent is lost. It forgot the original goal 40 messages ago.</text>
 </svg>
