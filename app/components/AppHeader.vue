@@ -7,6 +7,10 @@ function toggleTheme() {
 }
 
 function navColor(path: string): string {
+  if (path === '/blog') {
+    return route.path.startsWith('/blog') && !route.path.startsWith('/blog/tags')
+      ? 'var(--heading)' : 'var(--text-muted)'
+  }
   return route.path.startsWith(path) ? 'var(--heading)' : 'var(--text-muted)'
 }
 </script>
@@ -21,16 +25,19 @@ function navColor(path: string): string {
         <NuxtLink to="/blog" class="text-sm font-medium transition-colors" :style="{ color: navColor('/blog') }">
           Blog
         </NuxtLink>
+        <NuxtLink to="/blog/tags" class="text-sm font-medium transition-colors" :style="{ color: navColor('/blog/tags') }">
+          Tags
+        </NuxtLink>
         <NuxtLink to="/about" class="text-sm font-medium transition-colors" :style="{ color: navColor('/about') }">
           About
         </NuxtLink>
         <button
           aria-label="Toggle dark mode"
-          class="p-2 rounded-md transition-colors hover:opacity-80 theme-toggle"
+          class="flex items-center justify-center w-9 h-9 rounded-md transition-colors hover:opacity-80 theme-toggle"
           @click="toggleTheme"
         >
-          <Icon class="icon-light" name="mdi:weather-night" size="20" />
-          <Icon class="icon-dark" name="mdi:weather-sunny" size="20" />
+          <Icon class="icon-light block" name="mdi:weather-night" size="20" />
+          <Icon class="icon-dark block" name="mdi:weather-sunny" size="20" />
         </button>
       </div>
     </nav>

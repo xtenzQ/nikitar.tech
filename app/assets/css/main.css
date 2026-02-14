@@ -29,6 +29,9 @@
   --badge-text: #495057;
   --header-bg: rgba(255, 255, 255, 0.85);
   --shadow: rgba(0, 0, 0, 0.08);
+  --tag-border: #dee2e6;
+  --tag-hover: #e2e2e2;
+  --dash-color: silver;
 }
 
 .dark {
@@ -52,6 +55,9 @@
   --badge-text: #afb0b1;
   --header-bg: rgba(27, 27, 30, 0.85);
   --shadow: rgba(0, 0, 0, 0.3);
+  --tag-border: rgb(59, 79, 88);
+  --tag-hover: rgb(43, 56, 62);
+  --dash-color: rgb(63, 65, 68);
 }
 
 /* ── Base Styles ───────────────────────────────────────────── */

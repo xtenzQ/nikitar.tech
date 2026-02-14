@@ -7,3 +7,11 @@ export function formatDate(dateStr: string): string {
   const year = String(d.getUTCFullYear()).slice(2)
   return `${day} ${mon} '${year}`
 }
+
+export function formatDateLong(dateStr: string): string {
+  const d = new Date(dateStr)
+  const mon = months[d.getUTCMonth()]
+  const day = d.getUTCDate()
+  const year = d.getUTCFullYear()
+  return `${mon} ${day}, ${year}`
+}
