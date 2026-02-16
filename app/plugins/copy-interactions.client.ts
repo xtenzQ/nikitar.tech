@@ -47,6 +47,32 @@ export default defineNuxtPlugin(() => {
       })
     })
 
+    // Collapsible code blocks
+    const CODE_COLLAPSE_HEIGHT = 300
+    document.querySelectorAll('.code-block-wrapper').forEach((wrapper) => {
+      if ((wrapper as HTMLElement).dataset.collapseChecked) return
+      ;(wrapper as HTMLElement).dataset.collapseChecked = '1'
+
+      const pre = wrapper.querySelector('pre') as HTMLElement | null
+      const toggle = wrapper.querySelector('.code-expand-toggle') as HTMLElement | null
+      if (!pre || !toggle) return
+
+      // Measure natural height (needs to be unconstrained)
+      const naturalHeight = pre.scrollHeight
+      if (naturalHeight <= CODE_COLLAPSE_HEIGHT) return
+
+      // Mark as collapsible and store full height for CSS transition
+      wrapper.classList.add('is-collapsible')
+      ;(wrapper as HTMLElement).style.setProperty('--code-full-height', `${naturalHeight}px`)
+
+      const textEl = toggle.querySelector('.code-expand-text')
+      toggle.addEventListener('click', () => {
+        const expanded = wrapper.classList.toggle('is-expanded')
+        if (textEl) textEl.textContent = expanded ? 'Show less' : 'Show more'
+        toggle.setAttribute('aria-label', expanded ? 'Show less code' : 'Show more code')
+      })
+    })
+
     // Heading anchor copy
     document.querySelectorAll('.heading-anchor .anchor-link').forEach((link) => {
       if ((link as HTMLElement).dataset.bound) return

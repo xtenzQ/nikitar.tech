@@ -377,6 +377,66 @@ a:hover {
   display: block;
 }
 
+/* ── Collapsible Code Blocks ─────────────────────────────────── */
+.code-block-wrapper.is-collapsible pre {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  border-radius: 10px 10px 0 0;
+}
+
+.code-block-wrapper.is-collapsible.is-expanded pre {
+  max-height: var(--code-full-height);
+}
+
+/* Gradient overlay — hidden by default, shown when collapsible */
+.code-expand-toggle {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  border: 1px solid var(--code-border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, transparent, var(--code-bg) 70%);
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+
+.code-block-wrapper.is-collapsible .code-expand-toggle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.code-block-wrapper.is-collapsible.is-expanded .code-expand-toggle {
+  height: auto;
+  position: relative;
+  width: 100%;
+  padding: 0.4rem 0 0.5rem;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.code-expand-text {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+
+.code-expand-toggle:hover .code-expand-text {
+  color: var(--accent);
+}
+
 /* ── Callout / Prompt Boxes ────────────────────────────────── */
 .callout {
   padding: 1rem 1rem 1rem 3rem;
